@@ -60,12 +60,7 @@ const requesterSchema = new mongoose.Schema(
         },
         postcode: {
             type: String,
-            trim: true,
-            validate(value) {
-                if (!validator.matches(value, '[0-9]{4}')){
-                    throw new Error('Postcode is not valid!');
-                }
-            }
+            trim: true
         },
         mobile: {
             type: String,

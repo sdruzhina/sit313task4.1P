@@ -71,7 +71,7 @@
                       <option value="O" <%= data && data.country == 'O' ? 'selected' : '' %> >Other</option>
                     </select>
                   </div>
-                  <%if (err && err.errors['country']) { %>
+                  <%if (err.errors && err.errors['country']) { %>
                     <div class="text-red text-sm" style="margin-top: -10px;"><%= err.errors['country'] %></div>
                   <% } %>
                 </div>
@@ -82,7 +82,7 @@
                       <div class="input-group input-group-merge input-group-alternative mb-3">
                         <input class="form-control" name="firstName" id="firstName" type="text" value="<%= data ? data.firstName : '' %>">
                       </div>
-                      <%if (err && err.errors['firstName']) { %>
+                      <%if (err.errors && err.errors['firstName']) { %>
                         <div class="text-red text-sm" style="margin-top: -10px;"><%= err.errors['firstName'] %></div>
                       <% } %>
                     </div>
@@ -93,7 +93,7 @@
                       <div class="input-group input-group-merge input-group-alternative mb-3">
                         <input class="form-control" name="lastName" id="lastName" type="text" value="<%= data ? data.lastName : '' %>">
                       </div>
-                      <%if (err && err.errors['lastName']) { %>
+                      <%if (err.errors && err.errors['lastName']) { %>
                         <div class="text-red text-sm" style="margin-top: -10px;"><%= err.errors['lastName'] %></div>
                       <% } %>
                     </div>
@@ -104,7 +104,7 @@
                   <div class="input-group input-group-merge input-group-alternative mb-3">
                     <input class="form-control" name="email" id="email" type="email" value="<%= data ? data.email : '' %>">
                   </div>
-                  <%if (err && err.errors['email']) { %>
+                  <%if (err.errors && err.errors['email']) { %>
                     <div class="text-red text-sm" style="margin-top: -10px;"><%= err.errors['email'] %></div>
                   <% } %>
                 </div>
@@ -113,7 +113,7 @@
                   <div class="input-group input-group-merge input-group-alternative">
                     <input class="form-control" name="password" id="password" type="password">
                   </div>
-                  <%if (err && err.errors['password']) { %>
+                  <%if (err.errors && err.errors['password']) { %>
                     <div class="text-red text-sm"><%= err.errors['password'] %></div>
                   <% } %>
                 </div>
@@ -122,7 +122,7 @@
                   <div class="input-group input-group-merge input-group-alternative">
                     <input class="form-control" name="passwordConfirm" id="passwordConfirm" type="password">
                   </div>
-                  <%if (err && err.errors['passwordConfirm']) { %>
+                  <%if (err.errors && err.errors['passwordConfirm']) { %>
                     <div class="text-red text-sm"><%= err.errors['passwordConfirm'] %></div>
                   <% } %>
                 </div>
@@ -136,7 +136,7 @@
                   <div class="input-group input-group-merge input-group-alternative">
                     <input class="form-control" name="address2" id="address2" type="text" value="<%= data ? data.address2 : '' %>">
                   </div>
-                  <%if (err && err.errors['address1']) { %>
+                  <%if (err.errors && err.errors['address1']) { %>
                     <div class="text-red text-sm"><%= err.errors['address1'] %></div>
                   <% } %>
                 </div>
@@ -145,7 +145,7 @@
                   <div class="input-group input-group-merge input-group-alternative mb-3">
                     <input class="form-control" name="city" id="city" type="text" value="<%= data ? data.city : '' %>">
                   </div>
-                  <%if (err && err.errors['city']) { %>
+                  <%if (err.errors && err.errors['city']) { %>
                     <div class="text-red text-sm" style="margin-top: -10px;"><%= err.errors['city'] %></div>
                   <% } %>
                 </div>
@@ -166,7 +166,7 @@
                           <option value="WA" <%= data && data.state == 'WA' ? 'selected' : '' %> >WA</option>
                         </select>                      
                       </div>
-                      <%if (err && err.errors['state']) { %>
+                      <%if (err.errors && err.errors['state']) { %>
                         <div class="text-red text-sm" style="margin-top: -10px;"><%= err.errors['state'] %></div>
                       <% } %>
                     </div>
@@ -178,7 +178,7 @@
                         <input class="form-control" name="postcode" id="postcode" type="text" pattern="[0-9]{4}" title="Four digits"
                           value="<%= data ? data.postcode : '' %>">
                       </div>
-                      <%if (err && err.errors['postcode']) { %>
+                      <%if (err.errors && err.errors['postcode']) { %>
                         <div class="text-red text-sm" style="margin-top: -10px;"><%= err.errors['postcode'] %></div>
                       <% } %>
                     </div>
@@ -189,7 +189,7 @@
                   <div class="input-group input-group-merge input-group-alternative mb-3">
                     <input class="form-control" name="mobile" id="mobile" type="text" value="<%= data ? data.mobile : '' %>">
                   </div>
-                  <%if (err && err.errors['mobile']) { %>
+                  <%if (err.errors && err.errors['mobile']) { %>
                     <div class="text-red text-sm" style="margin-top: -10px;"><%= err.errors['mobile'] %></div>
                   <% } %>
                 </div>
