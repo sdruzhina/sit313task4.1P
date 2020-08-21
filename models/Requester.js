@@ -61,7 +61,6 @@ const requesterSchema = new mongoose.Schema(
         postcode: {
             type: String,
             trim: true,
-            required: true,
             validate(value) {
                 if (!validator.matches(value, '[0-9]{4}')){
                     throw new Error('Postcode is not valid!');
@@ -86,7 +85,7 @@ requesterSchema.virtual('passwordConfirm')
 // Check that the password matches password confirmation
 requesterSchema.path('password').validate(function(v) {
     if (this.password !== this.passwordConfirm) {
-    this.invalidate('passwordConfirm', 'Passwords must match.');
+        this.invalidate('passwordConfirm', 'Passwords must match.');
     }
 }, null);
 
